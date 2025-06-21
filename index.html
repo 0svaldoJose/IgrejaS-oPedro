@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paróquia São Pedro - Tianguá, CE | Fé, Comunidade e Acolhimento</title>
+    <meta name="description"
+        content="Site oficial da Paróquia São Pedro em Tianguá. Horários de missas, eventos, inscrições e como participar da nossa comunidade.">
+
+    <!-- (Ícones) -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- ==================== CABEÇALHO ==================== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#home" class="nav__logo">Paróquia São Pedro</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="#home" class="nav__link active-link">Início</a></li>
+                    <li><a href="#about" class="nav__link">Nossa História</a></li>
+                    <li><a href="#events" class="nav__link">Programação</a></li>
+                    <li><a href="#sacraments" class="nav__link">Inscrições</a></li>
+                    <li><a href="#donations" class="nav__link">Doações</a></li>
+                    <li><a href="#contact" class="nav__link">Contato</a></li>
+                </ul>
+                <div class="nav__close" id="nav-close"><i class="ri-close-line"></i></div>
+            </div>
+            <div class="nav__toggle" id="nav-toggle"><i class="ri-menu-line"></i></div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- ==================== 1. HOME (BANNER ROTATIVO) ==================== -->
+        <section class="home" id="home">
+            <div class="slider">
+                <div class="slide active"
+                    style="background-image: url('https://placehold.co/1920x1080/be9e44/ffffff?text=Igreja+São+Pedro');">
+                </div>
+                <div class="slide"
+                    style="background-image: url('https://placehold.co/1920x1080/5d5d5d/ffffff?text=Comunidade');">
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 2. MENSAGEM DO PADRE ==================== -->
+        <section class="message-section">
+            <div class="message__container container grid">
+                <img src="https://placehold.co/150x150/E8D4A2/4F4F4F?text=Padre+Justino" alt="Foto do Padre Justino"
+                    class="message__img">
+                <div class="message__content">
+                    <h2 class="message__name">Padre Justino</h2>
+                    <p class="message__title">Pároco</p>
+                    <p class="message__text">"Que a paz de Cristo reine em seus corações e lares. Sejam todos bem-vindos
+                        à casa do Pai, um lugar de fé, acolhimento e comunidade."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 3. NOSSA FÉ, NOSSA HISTÓRIA ==================== -->
+        <section class="section container" id="about">
+            <div class="history__container grid">
+                <div class="history__content">
+                    <h2 class="history__title">Nossa Fé, Nossa História</h2>
+                    <p class="history__summary">Fundada sobre a rocha da fé e a dedicação de gerações, a Paróquia São
+                        Pedro é um farol de esperança em Tianguá. Conheça os marcos, as pessoas e os milagres que
+                        construíram nossa comunidade ao longo das décadas.</p>
+                    <button class="button js-open-history-modal" aria-controls="history-modal">
+                        📖 Leia a História Completa
+                    </button>
+                </div>
+                <div class="history__image">
+                    <img src="https://placehold.co/500x400/CCCCCC/FFFFFF?text=Fachada+Histórica"
+                        alt="Imagem histórica da paróquia">
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 4. VIDA COMUNITÁRIA E SACRAMENTAL ==================== -->
+        <section class="section" id="sacraments" style="background-color: var(--card-bg-color);">
+            <div class="container">
+                <h2 class="section__title">Vida Comunitária e Sacramental</h2>
+                <p class="section__subtitle">Participe ativamente da vida da Igreja. Faça sua inscrição ou agende seu
+                    atendimento.</p>
+                <div class="sacraments__container grid">
+                    <!-- Agendamento em Destaque -->
+                    <div class="card card--action card--highlight">
+                        <div class="card__highlight-icon">
+                            <i class="ri-calendar-check-line"></i>
+                        </div>
+                        <div class="card__highlight-content">
+                            <h3 class="card__title">Agende seu Atendimento</h3>
+                            <p>Casamentos, formaturas, confissões e outras intenções. Fale diretamente com a secretaria.
+                            </p>
+                        </div>
+                        <div class="card__highlight-action">
+                            <a href="https://wa.me/5588999999999?text=Olá! Gostaria de solicitar um agendamento na Paróquia São Pedro."
+                                target="_blank" class="button button--white">Agendar via WhatsApp</a>
+                        </div>
+                    </div>
+                    <!-- Inscrições -->
+                    <div class="card card--action">
+                        <i class="ri-book-mark-line card__icon"></i>
+                        <h3 class="card__title">Inscrição para Batismo</h3>
+                        <p>Dê o primeiro passo na fé. Inscreva-se no curso de pais e padrinhos.</p>
+                        <button class="button button--outline js-open-inscription-modal"
+                            data-title="Inscrição para Batismo">Inscrever-se</button>
+                    </div>
+                    <div class="card card--action">
+                        <i class="ri-graduation-cap-line card__icon"></i>
+                        <h3 class="card__title">Catequese e Crisma</h3>
+                        <p>Formação na fé para crianças, jovens e adultos.</p>
+                        <button class="button button--outline js-open-inscription-modal"
+                            data-title="Inscrição para Catequese/Crisma">Inscrever-se</button>
+                    </div>
+                    <div class="card card--action">
+                        <i class="ri-service-line card__icon"></i>
+                        <h3 class="card__title">Quero Ser Coroinha</h3>
+                        <p>Sirva no altar e esteja mais perto de Cristo.</p>
+                        <button class="button button--outline js-open-inscription-modal"
+                            data-title="Inscrição para Coroinhas">Inscrever-se</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 5. NOSSA PROGRAMAÇÃO ==================== -->
+        <section class="weekly-agenda container" id="events">
+            <h2 class="agenda__title">Agenda <strong>Semanal</strong></h2>
+            <div class="agenda__grid">
+
+                <!-- Domingo -->
+                <div class="agenda__item">
+                    <div class="agenda__icon-circle"><i class="ph ph-church"></i></div>
+                    <h3>Domingo</h3>
+                    <ul>
+                        <li><span class="highlight">Missa:</span> 07h</li>
+                        <li><span class="highlight">Missa:</span> 09h</li>
+                        <li><span class="highlight">Missa:</span> 11h</li>
+                        <li><span class="highlight">Missa:</span> 17h</li>
+                        <li><span class="highlight">Missa:</span> 19h</li>
+                    </ul>
+                </div>
+
+                <!-- Segunda-feira -->
+                <div class="agenda__item">
+                    <div class="agenda__icon-circle"><i class="ph ph-hand-heart"></i></div>
+                    <h3>Segunda-feira</h3>
+                    <ul>
+                        <li><span class="highlight">Missa:</span> 18h</li>
+                        <li><span class="highlight">Terço das Mulheres:</span> 18h</li>
+                    </ul>
+                </div>
+
+                <!-- Terça-feira -->
+                <div class="agenda__item">
+                    <div class="agenda__icon-circle"><i class="ph ph-users-three"></i></div>
+                    <h3>Terça-feira</h3>
+                    <ul>
+                        <li><span class="highlight">Missa:</span> 18h</li>
+                        <li><span class="highlight">Terço dos Homens:</span> xxh</li>
+                    </ul>
+                </div>
+
+                <!-- Quarta-feira -->
+                <div class="agenda__item">
+                    <div class="agenda__icon-circle"><i class="ph ph-heartbeat"></i></div>
+                    <h3>Quarta-feira</h3>
+                    <ul>
+                        <li><span class="highlight">Missa:</span> 18h</li>
+                        <li><span class="highlight">Apostolado da Oração:</span> xxh</li>
+                    </ul>
+                </div>
+
+                <!-- Quinta-feira -->
+                <div class="agenda__item">
+                    <div class="agenda__icon-circle"><i class="ph ph-star-and-crescent"></i></div>
+                    <h3>Quinta-feira</h3>
+                    <ul>
+                        <li><span class="highlight">Missa:</span> 18h</li>
+                    </ul>
+                </div>
+
+                <!-- Sexta-feira -->
+                <div class="agenda__item">
+                    <div class="agenda__icon-circle"><i class="ph ph-cross"></i></div>
+                    <h3>Sexta-feira</h3>
+                    <ul>
+                        <li><span class="highlight">Missa:</span> 18h</li>
+                    </ul>
+                </div>
+
+                <!-- Sábado -->
+                <div class="agenda__item">
+                    <div class="agenda__icon-circle"><i class="ph ph-key"></i></div>
+                    <h3>Sábado</h3>
+                    <ul>
+                        <li><span class="highlight">Missa:</span> 18h</li>
+                        <li><span class="highlight">Crisma dos Adultos:</span> 18h</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== 7. DOAÇÕES ==================== -->
+        <section class="section" id="donations">
+            <div class="container">
+                <h2 class="section__title">Faça Parte Desta Obra</h2>
+                <p class="section__subtitle">Contribua com sua generosidade e fortaleça a missão da nossa paróquia.</p>
+
+                <div class="donations__container grid">
+
+                    <!-- Cartão de PIX -->
+                    <div class="donations__card card">
+                        <h3 class="card__title">Dízimo e Ofertas</h3>
+                        <p class="donations__text">Sua contribuição evangeliza, mantém a casa de Deus e ajuda quem mais
+                            precisa.</p>
+                        <img src="https://placehold.co/250x250/FFFFFF/333333?text=QR+CODE"
+                            alt="QR Code para doação via PIX" class="donations__qrcode">
+                        <div class="donations__pix-key">
+                            <strong>Chave PIX (CNPJ):</strong><br>
+                            00.000.000/0001-00
+                        </div>
+                    </div>
+
+                    <!-- Cartão de Alimentos -->
+                    <div class="donations__card card">
+                        <h3 class="card__title">Doação de Alimentos</h3>
+                        <p class="donations__text">Entregue alimentos não perecíveis na secretaria e ajude a colocar o
+                            pão na mesa de muitas famílias.</p>
+                        <img src="https://placehold.co/400x250/cccccc/ffffff?text=Cestas+Básicas"
+                            alt="Imagem representando cestas básicas" class="donations__food-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==================== 10. CONTATO ==================== -->
+        <section class="section" id="contact" style="background-color: var(--card-bg-color);">
+            <div class="container">
+                <h2 class="section__title">Fale Conosco</h2>
+                <div class="contact__container grid">
+
+                    <!-- Informações -->
+                    <div class="contact__info">
+                        <h3 class="contact__title">Secretaria Paroquial</h3>
+
+                        <ul class="contact__list">
+                            <li>
+                                <i class="ri-time-line"></i>
+                                <div>
+                                    <strong>Atendimento:</strong><br>
+                                    Segunda a Sexta: 08h–12h e 14h–18h<br>
+                                    Sábado: 08h–12h
+                                </div>
+                            </li>
+
+                            <li>
+                                <i class="ri-whatsapp-line"></i>
+                                <div>
+                                    <strong>WhatsApp:</strong><br>
+                                    <a href="https://wa.me/5588993653934" target="_blank">+55 (88) 9 9365‑3934</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <i class="ri-mail-line"></i>
+                                <div>
+                                    <strong>E-mail:</strong><br>
+                                    <a href="mailto:saopedrotiangua@hotmail.com">saopedrotiangua@hotmail.com</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <i class="ri-user-line"></i>
+                                <div>
+                                    <strong>Pároco:</strong><br>
+                                    Pe. Antônio Justino do Nascimento
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Mapa -->
+                    <div class="contact__map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.419287989502!2d-40.9861242!3d-3.7183641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7eb484467a1b907%3A0x27072484abf15f4d!2zUGFyw7NxdWlhIFPDo28gUGVkcm8!5e0!3m2!1spt-BR!2sbr!4v1750520869352!5m2!1spt-BR!2sbr"
+                            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Localização da Paróquia São Pedro – Tianguá">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== RODAPÉ ==================== -->
+    <footer class="footer">
+        <!-- <div class="footer__background">
+            <img src="/images/jesus-art-footer.png" alt="Imagem de Jesus" class="footer__image" />
+        </div> -->
+
+        <div class="footer__container container">
+            <div class="footer__top footer__grid">
+
+                <!-- Informações -->
+                <div class="footer__info">
+                    <h3 class="footer__title">Paróquia São Pedro</h3>
+                    <p>Rua Antônio Nunes de Menezes, 035<br>
+                        Bairro Rodoviária – Tianguá, CE<br>
+                        CEP 62327‑365</p>
+                </div>
+
+                <!-- Links Rápidos -->
+                <div class="footer__links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#about">Nossa História</a></li>
+                        <li><a href="#events">Programação</a></li>
+                        <li><a href="#sacraments">Inscrições</a></li>
+                        <li><a href="#donations">Doações</a></li>
+                        <li><a href="#contact">Mapa</a></li>
+                    </ul>
+                </div>
+
+                <!-- Redes Sociais -->
+                <div class="footer__social-box">
+                    <h4 class="footer__title">Siga-nos nas Redes Sociais</h4>
+                    <div class="footer__icons footer__icons--apps">
+                        <a href="https://www.facebook.com/paroquiasaopedrotiangua" target="_blank"
+                            aria-label="Facebook">
+                            <img src="assets/icons/facebook-app.svg" alt="Facebook">
+                        </a>
+                        <a href="https://www.instagram.com/paroquiasaopedrotiangua/" target="_blank"
+                            aria-label="Instagram">
+                            <img src="assets/icons/instagram-app.svg" alt="Instagram">
+                        </a>
+                        <a href="https://www.youtube.com/@paroquiasaopedro-tiangua646" target="_blank"
+                            aria-label="YouTube">
+                            <img src="assets/icons/youtube-app.svg" alt="YouTube">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>© 2024 Paróquia São Pedro – Diocese de Tianguá</p>
+                <p>Desenvolvido com amor pela <a href="https://www.instagram.com/cod.xis/"
+                        style="color: #be9e44;"><b>Codxis</b></a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== MODAIS ==================== -->
+    <div class="modal" id="inscription-modal">
+        <div class="modal__overlay js-close-modal"></div>
+        <div class="modal__content">
+            <button class="modal__close js-close-modal" aria-label="Fechar modal"><i class="ri-close-line"></i></button>
+            <h3 class="modal__title" id="inscription-modal-title">Formulário de Inscrição</h3>
+            <form action="#" class="modal__form">
+                <div class="form__group"><label for="name">Nome Completo</label><input type="text" id="name" name="name"
+                        required></div>
+                <div class="form__group"><label for="phone">Telefone (WhatsApp)</label><input type="tel" id="phone"
+                        name="phone" required></div>
+                <div class="form__group"><label for="email">E-mail</label><input type="email" id="email" name="email"
+                        required></div>
+                <div class="form__group"><label for="notes">Observações</label><textarea id="notes" name="notes"
+                        rows="3"></textarea></div>
+                <button type="submit" class="button">Enviar Inscrição</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="history-modal">
+        <div class="modal__overlay js-close-history-modal" tabindex="-1" aria-hidden="true"></div>
+        <div class="modal__content modal__content--large" role="dialog" aria-labelledby="history-modal-title">
+            <button class="modal__close js-close-history-modal" aria-label="Fechar">
+                <i class="ri-close-line" style="font-size: 1.8rem; color: #333;"></i>
+            </button>
+
+            <h3 class="modal__title" id="history-modal-title">A Jornada de Fé da Paróquia São Pedro</h3>
+            <div class="modal__body">
+                <img src="https://placehold.co/800x300/CCCCCC/FFFFFF?text=Paróquia+São+Pedro+Tianguá"
+                    alt="Foto histórica da Paróquia São Pedro"
+                    style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem;">
+
+                <section>
+                    <p><strong>A Paróquia São Pedro</strong>, localizada em Tianguá (CE), foi fundada oficialmente em
+                        2016, mas suas raízes estão ligadas às primeiras ações evangelizadoras da <strong>Irmã Gislane
+                            Simões Campos</strong>, que reuniu os moradores do bairro Rodoviária para encontros e
+                        novenas, promovendo uma forte cultura de fé e comunhão.</p>
+
+                    <p>Em <strong>10 de janeiro de 2016</strong>, foi oficialmente elevada à condição de paróquia, tendo
+                        como primeiro pároco o <strong>Pe. Aurélio Pinto de Sousa</strong>. Desde então, a Paróquia São
+                        Pedro tem crescido e se fortalecido como um centro espiritual acolhedor.</p>
+
+                    <p>Hoje, sob os cuidados do <strong>Pe. Antônio Justino do Nascimento</strong>, a paróquia é
+                        composta por diversos setores pastorais e promove celebrações semanais, eventos marianos, noites
+                        de avivamento e ações sociais junto à comunidade.</p>
+                </section>
+
+                <section style="margin-top: 1.5rem;">
+                    <h4>📌 Marcos Históricos</h4>
+                    <ul class="timeline">
+                        <li><strong>2012:</strong> Início das missões com Ir. Gislane no bairro Rodoviária.</li>
+                        <li><strong>2015:</strong> Formação da Comunidade São Pedro e articulação com a Diocese.</li>
+                        <li><strong>2016:</strong> Criação oficial da Paróquia São Pedro pela Diocese de Tianguá.</li>
+                        <li><strong>2020:</strong> Ampliação das redes sociais e integração com fiéis.</li>
+                        <li><strong>2023:</strong> Nomeação do atual pároco, Pe. Justino.</li>
+                    </ul>
+                </section>
+
+                <section style="margin-top: 1.5rem;">
+                    <p>A Paróquia São Pedro representa um verdadeiro farol de fé em Tianguá, reunindo centenas de fiéis
+                        em oração, serviço e comunhão. Com a missão de “apascentar as ovelhas do Senhor”, continua
+                        crescendo como sinal vivo da presença de Deus.</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== SCRIPT PRINCIPAL ==================== -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
